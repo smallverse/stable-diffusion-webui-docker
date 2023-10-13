@@ -32,7 +32,7 @@ echo "使用的端口号是：$PORT"
 export WEB_APP_PORT=$PORT
 export WEBUI_PORT=$PORT
 
-docker compose --profile download up --build
+docker-compose --profile download up --build
 # wait until its done, then:
-docker compose --profile [ui] up --build
+docker-compose --profile [ui] up --build
 # where [ui] is one of: invoke | auto | auto-cpu | comfy | comfy-cpu
