@@ -32,6 +32,7 @@ echo "使用的端口号是：$PORT"
 export WEB_APP_PORT=$PORT
 export WEBUI_PORT=$PORT
 
+echo "build and run"
 #docker compose --profile download up --build
 docker compose --profile download up --build -d
 # wait until its done, then:
