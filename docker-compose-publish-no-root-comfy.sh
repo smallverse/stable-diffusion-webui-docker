@@ -41,3 +41,4 @@ docker compose -f docker-compose-comfy.yml --profile download up --build -d
 docker compose -f docker-compose-comfy.yml --profile comfy up --build -d
 #docker compose --profile auto up --build -d --force-recreate
 # where [ui] is one of: invoke | auto | auto-cpu | comfy | comfy-cpu
+echo "------build and run end"
