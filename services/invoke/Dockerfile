@@ -50,4 +50,3 @@ ENTRYPOINT ["/docker/entrypoint.sh"]
 CMD invokeai --web --host 0.0.0.0 --port 7860 --root_dir ${ROOT} --config ${CONFIG_DIR}/models.yaml \
   --outdir /output/invoke --embedding_directory /data/embeddings/ --lora_directory /data/models/Lora \
   --no-nsfw_checker --no-safety_checker ${CLI_ARGS}
-
