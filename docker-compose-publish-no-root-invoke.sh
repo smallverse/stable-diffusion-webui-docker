@@ -34,10 +34,10 @@ export WEBUI_PORT=$PORT
 
 echo "------build and run"
 #docker compose --profile download up --build
-docker compose --profile download up --build -d
+docker compose -f docker-compose-invoke.yml --profile download up --build -d
 # wait until its done, then:
 #docker compose --profile [ui] up --build
 #docker compose --profile auto up --build
-docker compose --profile invoke up --build -d
+docker compose -f docker-compose-invoke.yml --profile invoke up --build -d
 #docker compose --profile auto up --build -d --force-recreate
 # where [ui] is one of: invoke | auto | auto-cpu | comfy | comfy-cpu
