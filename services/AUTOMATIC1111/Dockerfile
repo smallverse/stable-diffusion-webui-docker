@@ -25,6 +25,7 @@ FROM python:3.10.9-slim
 ENV DEBIAN_FRONTEND=noninteractive PIP_PREFER_BINARY=1
 
 RUN --mount=type=cache,target=/var/cache/apt \
+  sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
   apt-get update && \
   # we need those
   apt-get install -y fonts-dejavu-core rsync git jq moreutils aria2 \
