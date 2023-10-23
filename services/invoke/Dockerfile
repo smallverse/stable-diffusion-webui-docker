@@ -25,7 +25,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 #  git reset --hard f3b2e02921927d9317255b1c3811f47bd40a2bf9 && \
   pip install -e . && \
   pip list && \
-  pip uninstall torchmetrics &&\
+  pip uninstall torchmetrics -y &&\
   pip install==1.2.0 && \
   pip list
 
