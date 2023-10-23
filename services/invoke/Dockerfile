@@ -9,8 +9,8 @@ ENV DEBIAN_FRONTEND=noninteractive PIP_EXISTS_ACTION=w PIP_PREFER_BINARY=1
 
 # patch match:
 # https://github.com/invoke-ai/InvokeAI/blob/main/docs/installation/INSTALL_PATCHMATCH.md
-RUN --mount=type=cache,target=/var/cache/apt \
-  sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
+RUN --mount=type=cache,target=/var/cache/apt &&\
+  sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list &&\
   apt-get update && \
   apt-get install make g++ git libopencv-dev -y && \
   apt-get clean && \
