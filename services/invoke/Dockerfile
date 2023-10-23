@@ -26,7 +26,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
   pip install -e . && \
   pip list && \
   pip uninstall torchmetrics -y &&\
-  pip install==1.2.0 && \
+  pip install torchmetrics==1.2.0 && \
   pip list
 
 
