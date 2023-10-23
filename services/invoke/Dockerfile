@@ -22,7 +22,7 @@ RUN git clone https://github.com/invoke-ai/InvokeAI.git ${ROOT}
 WORKDIR ${ROOT}
 
 RUN --mount=type=cache,target=/root/.cache/pip \
-  git reset --hard f3b2e02921927d9317255b1c3811f47bd40a2bf9 && \
+#  git reset --hard f3b2e02921927d9317255b1c3811f47bd40a2bf9 && \
   pip install -e .
 
 
