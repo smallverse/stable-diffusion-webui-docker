@@ -14,13 +14,13 @@ fi
 
 case "$ENV_TYPE" in
   0)
-    PORT=8860
+    PORT=9860
     ;;
   1)
-    PORT=8861
+    PORT=9861
     ;;
   2)
-    PORT=8862
+    PORT=9862
     ;;
   *)
     echo "未设置有效的ENV_TYPE值或ENV_TYPE值无效"
